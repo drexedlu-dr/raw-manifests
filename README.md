@@ -22,7 +22,12 @@ git tag ARGOCD-${ARGOCD_VERSION}
 git push --tags
 ```
 
-This repository contains bash scripts to add a namespace to Kubernetes resources while preserving cluster-wide resources.
+Use the generated manifest by downloading it from:
+```
+https://raw.githubusercontent.com/drexedlu-dr/raw-manifests/refs/tags/ARGOCD-v3.1.8/install-with-namespace.yaml
+```
+
+The repository contains bash scripts to add a namespace to Kubernetes resources while preserving cluster-wide resources.
 
 ## Files
 
