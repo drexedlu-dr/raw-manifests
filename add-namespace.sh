@@ -27,7 +27,7 @@ CLUSTER_WIDE_RESOURCES=(
 # Input and output file paths
 INPUT_FILE="${1:-install.yaml}"
 OUTPUT_FILE="${2:-install-with-namespace.yaml}"
-NAMESPACE="${3:-argocd}"
+NAMESPACE="${3:-argocd-mini}"
 
 # Check if input file exists
 if [ ! -f "$INPUT_FILE" ]; then
