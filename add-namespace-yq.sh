@@ -78,8 +78,9 @@ yq eval-all 'select(.)' "$INPUT_FILE" | yq eval-all --output-format=yaml '. as $
         $doc | .metadata.namespace = "'"$NAMESPACE"'"
     end' > "$TEMP_FILE"
 
-# Move the temporary file to the output file
-mv "$TEMP_FILE" "$OUTPUT_FILE"
+# Insert the Namespace resource at the beginning of the output file
+cp argocd-namespace.yaml "$OUTPUT_FILE"
+cat "$TEMP_FILE" >> "$OUTPUT_FILE"
 
 echo "Processing completed!"
 echo ""
